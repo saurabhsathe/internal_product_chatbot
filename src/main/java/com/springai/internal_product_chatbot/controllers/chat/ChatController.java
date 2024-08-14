@@ -25,7 +25,7 @@ public class ChatController {
     }
 
     @GetMapping("/answerProductQuery")
-    String generateProductAnswer(@RequestParam(value = "question", defaultValue = "Tell me about your favorite city") String question) {
+    String generateProductAnswer(@RequestParam(value = "question", defaultValue = "How do you crop objects in photoshoot?") String question) {
         try {
             return chatService.generateAnswer(question);
         } catch (RestClientException e) {
